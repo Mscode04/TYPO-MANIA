@@ -18,25 +18,33 @@
       background-color: #000000;
       color: #fff;
     }
-
     .navbar {
       background-color: #202020 !important;
       margin: 0;
       width: 100%;
+      
       position: fixed;
-      height: 80px;
+      top: 0;
+      z-index: 10;
+      padding: 5px 10px; /* Adjust the padding to decrease the height */
     }
-
+    
     .navbar-brand {
       color: #fff;
-      font-size: 20px;
+      font-size: 18px; /* Slightly smaller font size */
       font-weight: bold;
     }
-
+    
     .navbar-nav .nav-link {
       color: #fff;
+      font-size: 14px; /* Smaller font size for nav links */
+      padding: 5px 10px; /* Adjust padding to reduce height */
     }
-
+    
+    .navbar-toggler {
+      padding: 5px; /* Reduce padding for smaller toggler size */
+    }
+    
     .navbar-nav .nav-link:hover {
       color: #6a0dad;
     }
@@ -73,6 +81,7 @@
       flex: 1;
       text-align: center;
       padding: 20px;
+      margin-top: 70px; 
     }
 
     h1, h2 {
@@ -113,6 +122,7 @@
         font-size: 16px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -121,14 +131,14 @@
     <div class="container">
       <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" style="width: 120px;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" style="color: #fff;"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link active" href="doc.html">Doc</a></li>
-          <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -137,7 +147,7 @@
   <!-- Main Content -->
   <main style="margin-top:100px">
     <div class="container">
-      <h1>How to Play the Miracle Keyboard Game</h1>
+      <h1>How to Play the Typo Mania Keyboard Game</h1>
       <p>The Miracle Keyboard Game is a fun and engaging typing challenge where you test your speed and accuracy. Follow the instructions below to get started:</p>
 
       <div class="step">
