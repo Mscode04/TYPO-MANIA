@@ -315,6 +315,12 @@
       max-width: 70%;
     }
   }
+    #miracleInput {
+  pointer-events: none; /* Prevents interaction */
+  user-select: none; /* Prevents text selection */
+  touch-action: none; /* Prevents any touch action */
+}
+
   </style>
 </head>
 <body>
@@ -438,8 +444,9 @@ function startGame() {
   nameInput.disabled = true;
   miracleInput.value = '';
   miracleInput.placeholder = 'Type here';
-  miracleInput.readOnly = false;
+  miracleInput.readOnly = true; // Ensure it's readonly to disable keyboard
   miracleInput.classList.remove('hidden');
+  miracleInput.setAttribute('tabindex', '-1'); // Prevent focus from bringing up the keyboard
   keyboard.classList.remove('hidden');
   step2.classList.remove('hidden');
   timerDisplay.textContent = `Time Left: ${timeLeft} seconds`;
