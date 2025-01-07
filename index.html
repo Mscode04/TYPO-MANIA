@@ -15,35 +15,35 @@
       height: 100vh;
       flex-direction: column;
       min-height: 100vh;
-      background-color: #000000;
-      color: #fff;
+      background-color: #213555;
+      color: #F5EFE7;
     }
 
     .navbar {
-      background-color: #202020 !important;
+      background-color: #3E5879 !important;
       margin: 0;
       width: 100%;
       position: fixed;
+      z-index: 100;
     }
 
     .navbar-brand {
-      color: #fff;
+      color: #F5EFE7;
       font-size: 20px;
       font-weight: bold;
-      
     }
 
     .navbar-nav .nav-link {
-      color: #fff;
+      color: #F5EFE7;
     }
 
     .navbar-nav .nav-link:hover {
-      color: #6a0dad;
+      color: #D8C4B6;
     }
 
     footer {
-      background-color: #000000;
-      color: #fff;
+      background-color: #213555;
+      color: #F5EFE7;
       padding: 20px 0;
       margin-top: 200px;
       width: 100%;
@@ -59,14 +59,14 @@
     }
 
     .social-icons a {
-      color: #fff;
+      color: #F5EFE7;
       margin: 0 10px;
       font-size: 20px;
       text-decoration: none;
     }
 
     .social-icons a:hover {
-      color: #6a0dad;
+      color: #D8C4B6;
     }
 
     main {
@@ -77,6 +77,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: #213555;
     }
 
     .keyboard {
@@ -93,21 +94,21 @@
       margin: 5px;
       text-align: center;
       line-height: 50px;
-      border: 2px solid violet;
+      border: 2px solid #D8C4B6;
       cursor: pointer;
-      background-color: #3c3c3c;
-      color: #fff;
+      background-color: #3E5879;
+      color: #F5EFE7;
       user-select: none;
       border-radius: 5px;
       transition: background-color 0.2s;
     }
 
     .key:hover {
-      background-color: #6a0dad;
+      background-color: #D8C4B6;
     }
 
     .highlight {
-      background-color: #00FF00 !important;
+      background-color: #89A8B2 !important;
     }
 
     .hidden {
@@ -117,51 +118,60 @@
     #startButton {
       padding: 10px 20px;
       border: none;
-      background-color: #3c3c3c;
-      color: #fff;
+      background-color: #3E5879;
+      color: #F5EFE7;
       font-size: 16px;
       border-radius: 5px;
-      border: 2px solid #A3005A;
+      border: 2px solid #D8C4B6;
       cursor: pointer;
     }
 
     #startButton:hover {
-      background-color: #6a0dad;
+      background-color: #D8C4B6;
     }
 
     #nameInput, #miracleInput {
       padding: 10px;
       font-size: 16px;
-      border: 2px solid #A3005A;
+      border: 2px solid #D8C4B6;
       border-radius: 5px;
       margin: 10px 0;
       max-width: 80%;
-      background-color: #1c1c1c;
-      color: #fff;
+      background-color: #3E5879;
+      color: #F5EFE7;
     }
 
     #difficulty {
       margin: 10px 0;
       padding: 10px;
       font-size: 16px;
-      border: 2px solid #A3005A;
+      border: 2px solid #D8C4B6;
       border-radius: 5px;
-      background-color: #1c1c1c;
-      color: #fff;
+      background-color: #3E5879;
+      color: #F5EFE7;
     }
 
     #timer {
       font-size: 18px;
       margin-top: 10px;
     }
-
+    #resetButton{
+      padding: 10px 20px;
+      border: none;
+      background-color: #213555;
+      color: #D8C4B6;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 2px solid #D8C4B6;
+      cursor: pointer;
+    }
     .modal {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: #1c1c1c;
-      color: #fff;
+      background-color: #3E5879;
+      color: #F5EFE7;
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -193,11 +203,11 @@
     }
 
     .modal.success {
-      border: 3px solid green;
+      border: 3px solid #009a08;
     }
 
     .modal.error {
-      border: 3px solid #f30387;
+      border: 3px solid #f40000;
     }
 
     .modal p {
@@ -205,122 +215,154 @@
     }
 
     .modal.success p {
-      color: green;
+      color: #89A8B2;
     }
 
     .modal.error p {
-      color: #fff;
+      color: #D8C4B6;
     }
 
     .qt span {
-      color: #A3005A;
+      color: #D8C4B6;
       font-size: 18px;
       font-family: 'Times New Roman', Times, serif;
       margin: 5px;
     }
-    .qt{
+
+    .qt {
       margin-bottom: 50px;
     }
-    .container-box{
-      width: 600px;
+
+    .container-box {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
       padding: 30px;
       border-radius: 10px;
-      border: #A3005A solid 3px;
-      background-color: #1b1b1b;
+      border: #89A8B2 solid 3px;
+      background-color: #3a506d;
+      background: url('open.jpg') no-repeat center center;
+      background-size: cover; /* Ensures the image is responsive */
     }
-   .labal{
-    font-size: 20px;
-    color: #f30387;
-   }
-   .labal-2{
-    font-size: 20px;
-    color: #f30387;
-    margin-top: 10px;
-    margin-bottom:-3px ;
-   }
-   #modalButton,#restartButton{
-    padding: 10px 20px;
-    border: none;
-    background-color: #3c3c3c;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid #A3005A;
-    cursor: pointer;
-   }
-   select{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-   }
-   @media (max-width: 768px) {
-    .container-box {
-      width: 90%;
-      padding: 20px;
+    
+    /* Overlay styling */
+    .container-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f5efe72a; /* Semi-transparent black overlay */
+      border-radius: 10px;
+      z-index: 1; /* Ensures overlay is on top of the background but behind content */
+    }
+    
+    .container-box > * {
+      position: relative;
+      z-index: 2; /* Ensures content is above the overlay */
+    }
+    
+
+    .labal {
+      font-size: 20px;
+      color: #D8C4B6;
     }
 
-    .key {
-      width: 40px;
-      height: 40px;
-      margin: 3px;
-      line-height: 40px;
-      font-size: 14px;
+    .labal-2 {
+      font-size: 20px;
+      color: #D8C4B6;
+      margin-top: 10px;
+      margin-bottom: -3px;
     }
 
-    #nameInput, #miracleInput {
-      max-width: 100%;
-    }
-
-    #timer {
+    #modalButton, #restartButton {
+      padding: 10px 20px;
+      border: none;
+      background-color: #3E5879;
+      color: #F5EFE7;
       font-size: 16px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .key {
-      width: 35px;
-      height: 35px;
-      margin: 2px;
-      line-height: 35px;
-      font-size: 12px;
+      border-radius: 5px;
+      border: 2px solid #D8C4B6;
+      cursor: pointer;
+      margin-left: 5px;
     }
 
-    .labal, .labal-2 {
-      font-size: 16px;
+    select {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    #timer {
-      font-size: 14px;
+    @media (max-width: 768px) {
+      .container-box {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .key {
+        width: 40px;
+        height: 40px;
+        margin: 3px;
+        line-height: 40px;
+        font-size: 14px;
+      }
+
+      #nameInput, #miracleInput {
+        max-width: 100%;
+      }
+
+      #timer {
+        font-size: 16px;
+      }
     }
 
-    #startButton, #modalButton, #restartButton {
-      padding: 8px 16px;
-      font-size: 14px;
-    }
-  }
-  @media (max-width: 768px) {
-    .container-head h6 {
-      font-size: 18px;
+    @media (max-width: 480px) {
+      .key {
+        width: 35px;
+        height: 35px;
+        margin: 2px;
+        line-height: 35px;
+        font-size: 12px;
+      }
+
+      .labal, .labal-2 {
+        font-size: 16px;
+      }
+
+      #timer {
+        font-size: 14px;
+      }
+
+      #startButton, #modalButton, #restartButton {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
     }
 
-    .container-head h1 img {
-      max-width: 80%;
-    }
-  }
+    @media (max-width: 768px) {
+      .container-head h6 {
+        font-size: 18px;
+      }
 
-  @media (max-width: 480px) {
-    .container-head h6 {
-      font-size: 16px;
+      .container-head h1 img {
+        max-width: 80%;
+      }
     }
 
-    .container-head h1 img {
-      max-width: 70%;
+    @media (max-width: 480px) {
+      .container-head h6 {
+        font-size: 16px;
+      }
+
+      .container-head h1 img {
+        max-width: 70%;
+      }
     }
-  }
+
     #miracleInput {
-  pointer-events: none; /* Prevents interaction */
-  user-select: none; /* Prevents text selection */
-  touch-action: none; /* Prevents any touch action */
-}
-
+      pointer-events: none;
+      user-select: none;
+      touch-action: none;
+    }
   </style>
 </head>
 <body>
@@ -333,6 +375,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="doc.html">Docs</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -345,32 +388,33 @@
   <main style="margin-top:100px">
     <div class="container-head">
       <h1><img src="assets/img/logo-text.png" alt="" ></h1>
-    <h6 class="qt"><span>"Make a Fun With Typing"</span></h6>
+      <h6 class="qt"><span>"Make a Fun With Typing"</span></h6>
     </div>
     <div class="container-box">
-      <p class="labal">Enter Full Name</p>
+      <p class="labal" style="color: rgb(255, 255, 255);">Enter Good Name</p>
       <input type="text" id="nameInput" placeholder="Enter your name" autocomplete="off">
-    <p class="labal-2">Difficulty</p>
-    <select id="difficulty">
-      <option value="30">Easy (30 seconds)</option>
-      <option value="20">Medium (20 seconds)</option>
-      <option value="10">Hard (10 seconds)</option>
-    </select>
-    <p id="step2" class="hidden">  </p>
-    <input type="text" id="miracleInput" class="hidden" placeholder="Type here" autocomplete="off" readonly>
-    <div class="keyboard hidden" id="keyboard"></div>
-    <p id="timer">Time Left: 30 seconds</p>
-    <button id="startButton">Start Game</button>
+      <p class="labal-2" style="color: rgb(255, 255, 255);">Select Your Challenge Level</p>
+      <select id="difficulty">
+        <option value="30" class="bg-success">Easy (30 seconds)</option>
+        <option value="20" class="bg-warning">Medium (20 seconds)</option>
+        <option value="10" class="bg-danger">Hard (10 seconds)</option>
+      </select>
+      <p id="step2" class="hidden">  </p>
+      <input type="text" id="miracleInput" class="hidden" placeholder="Type here" autocomplete="off" readonly>
+      <div class="keyboard hidden" id="keyboard"></div>
+      <button id="resetButton" class="hidden">Reset Game</button>
+      <p id="timer" style="color: rgb(255, 0, 0);">Time Left: 30 seconds</p>
+      <button id="startButton">Start Game</button>
     </div>
   </main>
 
-
   <div id="overlay"></div>
-<div id="modal" class="modal">
-  <p id="modalMessage"></p>
-  <button id="modalButton">Close</button>
-  <button id="restartButton" class="hidden">Restart</button>
-</div>
+  <div id="modal" class="modal">
+    <p id="modalMessage"></p>
+    <button id="modalButton">Close</button>
+    <button id="restartButton" class="hidden">Restart</button>
+  </div>
+
   <!-- Footer -->
   <footer>
     <hr>
@@ -388,116 +432,141 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script >
+  <script>
     const nameInput = document.getElementById('nameInput');
-const miracleInput = document.getElementById('miracleInput');
-const keyboard = document.getElementById('keyboard');
-const timerDisplay = document.getElementById('timer');
-const resultDisplay = document.getElementById('modalMessage');
-const startButton = document.getElementById('startButton');
-const step2 = document.getElementById('step2');
-const difficultySelect = document.getElementById('difficulty');
-const overlay = document.getElementById('overlay');
-const modal = document.getElementById('modal');
-const modalButton = document.getElementById('modalButton');
-const restartButton = document.getElementById('restartButton');
+    const miracleInput = document.getElementById('miracleInput');
+    const keyboard = document.getElementById('keyboard');
+    const timerDisplay = document.getElementById('timer');
+    const resultDisplay = document.getElementById('modalMessage');
+    const startButton = document.getElementById('startButton');
+    const resetButton = document.getElementById('resetButton');
+    const step2 = document.getElementById('step2');
+    const difficultySelect = document.getElementById('difficulty');
+    const overlay = document.getElementById('overlay');
+    const modal = document.getElementById('modal');
+    const modalButton = document.getElementById('modalButton');
+    const restartButton = document.getElementById('restartButton');
 
-const keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-let timer;
-let timeLeft;
+    const keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    let timer;
+    let timeLeft;
 
-function showModal(message, type = 'success', restart = false) {
-  resultDisplay.textContent = message;
-  modal.className = `modal show ${type}`;
-  overlay.classList.add('show');
-  restartButton.classList.toggle('hidden', !restart);
-}
-
-function hideModal() {
-  modal.classList.remove('show');
-  overlay.classList.remove('show');
-}
-
-function createKeyboard() {
-  keyboard.innerHTML = '';
-  const shuffledKeys = [...keys].sort(() => Math.random() - 0.5);
-  shuffledKeys.forEach((key) => {
-    const keyButton = document.createElement('div');
-    keyButton.classList.add('key');
-    keyButton.textContent = key;
-    keyButton.onclick = () => {
-      miracleInput.value += key;
-      keyButton.classList.add('highlight');
-      setTimeout(() => keyButton.classList.remove('highlight'), 200);
-    };
-    keyboard.appendChild(keyButton);
-  });
-}
-
-function startGame() {
-  if (!nameInput.value.trim()) {
-    showModal('Kindly Enter Your Good Name To Start The Game.', 'error');
-    return;
-  }
-
-  timeLeft = parseInt(difficultySelect.value, 10);
-  nameInput.disabled = true;
-  miracleInput.value = '';
-  miracleInput.placeholder = 'Type here';
-  miracleInput.readOnly = true; // Ensure it's readonly to disable keyboard
-  miracleInput.classList.remove('hidden');
-  miracleInput.setAttribute('tabindex', '-1'); // Prevent focus from bringing up the keyboard
-  keyboard.classList.remove('hidden');
-  step2.classList.remove('hidden');
-  timerDisplay.textContent = `Time Left: ${timeLeft} seconds`;
-  startButton.disabled = true;
-
-  createKeyboard();
-  const keyboardInterval = setInterval(createKeyboard, 1000);
-
-  timer = setInterval(() => {
-    timeLeft--;
-    timerDisplay.textContent = `Time Left: ${timeLeft} seconds`;
-
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      clearInterval(keyboardInterval);
-      finishGame();
+    function showModal(message, type = 'success', restart = false) {
+      resultDisplay.textContent = message;
+      modal.className = `modal show ${type}`;
+      overlay.classList.add('show');
+      restartButton.classList.toggle('hidden', !restart);
     }
-  }, 1000);
-}
 
-function finishGame() {
-  miracleInput.readOnly = true;
-  startButton.disabled = false;
-  keyboard.classList.add('hidden');
+    function hideModal() {
+      modal.classList.remove('show');
+      overlay.classList.remove('show');
+    }
 
-  const originalName = nameInput.value.trim().toUpperCase();
-  const typedName = miracleInput.value.trim().toUpperCase();
+    function createKeyboard() {
+      keyboard.innerHTML = '';
+      const shuffledKeys = [...keys].sort(() => Math.random() - 0.5);
+      shuffledKeys.forEach((key) => {
+        const keyButton = document.createElement('div');
+        keyButton.classList.add('key');
+        keyButton.textContent = key;
+        keyButton.onclick = () => {
+          miracleInput.value += key;
+          keyButton.classList.add('highlight');
+          setTimeout(() => keyButton.classList.remove('highlight'), 200);
+        };
+        keyboard.appendChild(keyButton);
+      });
+    }
 
-  if (originalName === typedName) {
-    showModal(`Congratulations, ${nameInput.value}! You typed the name correctly.`, 'success', true);
-  } else {
-    showModal(`Oops, ${nameInput.value}! The names do not match. Try again.`, 'error', true);
-  }
-}
+    function startGame() {
+      if (!nameInput.value.trim()) {
+        showModal('Kindly Enter Your Good Name To Start The Game.', 'error');
+        return;
+      }
+    
+      timeLeft = parseInt(difficultySelect.value, 10);
+      nameInput.disabled = true;
+      miracleInput.value = '';
+      miracleInput.placeholder = 'Type here';
+      miracleInput.readOnly = true; // Ensure it's readonly to disable keyboard
+      miracleInput.classList.remove('hidden');
+      miracleInput.setAttribute('tabindex', '-1'); // Prevent focus from bringing up the keyboard
+      keyboard.classList.remove('hidden');
+      resetButton.classList.remove('hidden');
+      step2.classList.remove('hidden');
+      timerDisplay.textContent = `Time Left: ${timeLeft} seconds`;
+      startButton.classList.add('hidden'); // Hide the Start Game button
+    
+      createKeyboard();
+      const keyboardInterval = setInterval(createKeyboard, 1000);
+    
+      timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = `Time Left: ${timeLeft} seconds`;
+    
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          clearInterval(keyboardInterval);
+          finishGame();
+        }
+      }, 1000);
+    }
+    
+    function finishGame() {
+      miracleInput.readOnly = true;
+      startButton.classList.remove('hidden'); // Show the Start Game button again
+      keyboard.classList.add('hidden');
+      resetButton.classList.add('hidden');
+    
+      const originalName = nameInput.value.trim().toUpperCase();
+      const typedName = miracleInput.value.trim().toUpperCase();
+    
+      if (originalName === typedName) {
+        showModal(`Congratulations, ${nameInput.value}! You typed the name correctly.`, 'success', true);
+      } else {
+        showModal(`Oops, ${nameInput.value}! The names do not match. Try again.`, 'error', true);
+      }
+    }
 
-miracleInput.addEventListener('paste', (e) => e.preventDefault());
-miracleInput.addEventListener('keydown', (e) => e.preventDefault());
+    function finishGame() {
+      miracleInput.readOnly = true;
+      startButton.disabled = false;
+      keyboard.classList.add('hidden');
+      resetButton.classList.add('hidden');
 
-startButton.addEventListener('click', startGame);
-modalButton.addEventListener('click', hideModal);
-restartButton.addEventListener('click', () => {
-  hideModal();
-  nameInput.disabled = false;
-  nameInput.value = '';
-  miracleInput.value = '';
-  step2.classList.add('hidden');
-  miracleInput.classList.add('hidden');
-  keyboard.classList.add('hidden');
-  startButton.disabled = false;
-});
+      const originalName = nameInput.value.trim().toUpperCase();
+      const typedName = miracleInput.value.trim().toUpperCase();
+
+      if (originalName === typedName) {
+        showModal(`Congratulations, ${nameInput.value}! You typed the name correctly.`, 'success', true);
+      } else {
+        showModal(`Oops, ${nameInput.value}! The names do not match. Try again.`, 'error', true);
+      }
+    }
+
+    function resetGame() {
+      clearInterval(timer);
+      nameInput.disabled = false;
+      nameInput.value = '';
+      miracleInput.value = '';
+      step2.classList.add('hidden');
+      miracleInput.classList.add('hidden');
+      keyboard.classList.add('hidden');
+      resetButton.classList.add('hidden');
+      startButton.classList.remove('hidden'); // Show the Start Game button again
+      timerDisplay.textContent = 'Time Left: 30 seconds';
+    }
+
+    miracleInput.addEventListener('paste', (e) => e.preventDefault());
+    miracleInput.addEventListener('keydown', (e) => e.preventDefault());
+
+    startButton.addEventListener('click', startGame);
+    resetButton.addEventListener('click', resetGame);
+    modalButton.addEventListener('click', hideModal);
+    restartButton.addEventListener('click', resetGame);
   </script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
