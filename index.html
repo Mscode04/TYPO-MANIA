@@ -178,7 +178,7 @@
       z-index: 1000;
       display: none;
       width: 90%;
-      height: 200px;
+      height: 250px;
       max-width: 350px;
       text-align: center;
     }
@@ -287,7 +287,22 @@
       cursor: pointer;
       margin-left: 5px;
     }
-
+    .post-button-modal{
+      padding: 10px 20px;
+      border: none;
+      background-color: #3E5879;
+      color: #F5EFE7;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 2px solid #D8C4B6;
+      margin-top: 5px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+    .post-button-modal a{
+      text-decoration: none;
+      color: #F5EFE7;
+    }
     select {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
@@ -363,6 +378,46 @@
       user-select: none;
       touch-action: none;
     }
+    .feedback-container {
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      color: #333;
+    }
+  
+    .feedback-container h5 {
+      font-size: 18px;
+      color: #D8C4B6;
+      margin-bottom: 15px;
+      font-family: 'Arial', sans-serif;
+      
+    }
+  
+    .post-button {
+      background-color: #D8C4B6;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  
+    .post-button a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Verdana', sans-serif;
+    }
+  
+    .post-button:hover {
+      background-color: #ff4081;
+      transform: scale(1.1);
+    }
+  
+    .post-button a:hover {
+      color: #ffd700;
+    }
   </style>
 </head>
 <body>
@@ -413,10 +468,19 @@
     <p id="modalMessage"></p>
     <button id="modalButton">Close</button>
     <button id="restartButton" class="hidden">Restart</button>
+    <button class="post-button-modal">
+      <a href="https://ngl.link/ms.dev">🌟 Post Your Feedback 🚀</a>
+    </button>
   </div>
 
   <!-- Footer -->
   <footer>
+    <div class="feedback-container">
+      <h5>📢 Share Your Thoughts & Feedback Anonymously 💬</h5>
+      <button class="post-button">
+        <a href="https://ngl.link/ms.dev">🌟 Post Your Feedback 🚀</a>
+      </button>
+    </div>
     <hr>
     <div class="footer-logo">
       <h4>Developed By <h1><img src="assets/img/msdev.png" alt="" style="width: 200px;"></h1></h4>
