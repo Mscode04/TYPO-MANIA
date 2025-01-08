@@ -542,12 +542,21 @@
         keyboard.appendChild(keyButton);
       });
     }
-
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load the saved name from localStorage and display it
+      const savedName = localStorage.getItem('playerName');
+      if (savedName) {
+        nameInput.value = savedName;
+      }
+    });
     function startGame() {
       if (!nameInput.value.trim()) {
         showModal('Kindly Enter Your Good Name To Start The Game.', 'error');
         return;
       }
+    
+      // Save the name to localStorage
+      localStorage.setItem('playerName', nameInput.value.trim());
     
       timeLeft = parseInt(difficultySelect.value, 10);
       nameInput.disabled = true;
@@ -606,6 +615,10 @@
       resetButton.classList.add('hidden');
       startButton.classList.remove('hidden'); // Show the Start Game button again
       timerDisplay.textContent = 'Time Left: 30 seconds';
+      const savedName = localStorage.getItem('playerName');
+      if (savedName) {
+        nameInput.value = savedName;
+      }
     }
 
     miracleInput.addEventListener('paste', (e) => e.preventDefault());
