@@ -241,7 +241,7 @@
       border-radius: 10px;
       border: #89A8B2 solid 3px;
       background-color: #3a506d;
-      background: url('open.jpg') no-repeat center center;
+      background: url('Designer.jpeg') no-repeat center center;
       background-size: cover; /* Ensures the image is responsive */
     }
     
@@ -253,7 +253,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #f5efe72a; /* Semi-transparent black overlay */
+      background-color: #0009685b; /* Semi-transparent black overlay */
       border-radius: 10px;
       z-index: 1; /* Ensures overlay is on top of the background but behind content */
     }
@@ -499,7 +499,7 @@
       startButton.classList.add('hidden'); // Hide the Start Game button
     
       createKeyboard();
-      const keyboardInterval = setInterval(createKeyboard, 1000);
+      const keyboardInterval = setInterval(createKeyboard, 1500);
     
       timer = setInterval(() => {
         timeLeft--;
@@ -529,21 +529,7 @@
       }
     }
 
-    function finishGame() {
-      miracleInput.readOnly = true;
-      startButton.disabled = false;
-      keyboard.classList.add('hidden');
-      resetButton.classList.add('hidden');
 
-      const originalName = nameInput.value.trim().toUpperCase();
-      const typedName = miracleInput.value.trim().toUpperCase();
-
-      if (originalName === typedName) {
-        showModal(`Congratulations, ${nameInput.value}! You typed the name correctly.`, 'success', true);
-      } else {
-        showModal(`Oops, ${nameInput.value}! The names do not match. Try again.`, 'error', true);
-      }
-    }
 
     function resetGame() {
       clearInterval(timer);
@@ -564,7 +550,8 @@
     startButton.addEventListener('click', startGame);
     resetButton.addEventListener('click', resetGame);
     modalButton.addEventListener('click', hideModal);
-    restartButton.addEventListener('click', resetGame);
+    restartButton.addEventListener('click', () => location.reload());
+
   </script>
   <script src="assets/js/main.js"></script>
 </body>
