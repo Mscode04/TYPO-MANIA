@@ -418,6 +418,21 @@
     .post-button a:hover {
       color: #ffd700;
     }
+    .ban a{
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 11px;
+      padding: 5px;
+      background-color: black;
+      color: #ffffff;
+      
+      
+      
+
+    }
+    .ban{
+      padding: 5px;
+    }
   </style>
 </head>
 <body>
@@ -439,6 +454,9 @@
     </div>
   </nav>
 
+    <p class="text-center ban" style="background-color: hsl(0, 98%, 77%); color: #213555; margin-top: 80px;height:30px">Learn How to Play Typo Mania! &nbsp<a href="doc.html" class="p-1" >Doc</a></p>
+ 
+  
   <!-- Main Content -->
   <main style="margin-top:100px">
     <div class="container-head">
@@ -446,13 +464,13 @@
       <h6 class="qt"><span>"Make a Fun With Typing"</span></h6>
     </div>
     <div class="container-box">
-      <p class="labal" style="color: rgb(255, 255, 255);">Enter Good Name</p>
+      <p class="labal" style="color: rgb(255, 255, 255);">Enter First Name</p>
       <input type="text" id="nameInput" placeholder="Enter your name" autocomplete="off">
       <p class="labal-2" style="color: rgb(255, 255, 255);">Select Your Challenge Level</p>
       <select id="difficulty">
-        <option value="30" class="bg-success">Easy (30 seconds)</option>
-        <option value="20" class="bg-warning">Medium (20 seconds)</option>
-        <option value="10" class="bg-danger">Hard (10 seconds)</option>
+        <option value="30" class="bg-success">Easy &nbsp  &nbsp Seconds[1.5]</option>
+        <option value="20" class="bg-warning">Medium  &nbsp  &nbsp Seconds[1.2]</option>
+        <option value="10" class="bg-danger">Hard  &nbsp  &nbsp Seconds[1]</option>
       </select>
       <p id="step2" class="hidden">  </p>
       <input type="text" id="miracleInput" class="hidden" placeholder="Type here" autocomplete="off" readonly>
@@ -558,7 +576,7 @@
       // Save the name to localStorage
       localStorage.setItem('playerName', nameInput.value.trim());
     
-      timeLeft = parseInt(difficultySelect.value, 10);
+      timeLeft = 30; // Fixed time for all levels
       nameInput.disabled = true;
       miracleInput.value = '';
       miracleInput.placeholder = 'Type here';
@@ -572,7 +590,23 @@
       startButton.classList.add('hidden'); // Hide the Start Game button
     
       createKeyboard();
-      keyboardInterval = setInterval(createKeyboard, 1500); // Save the interval ID
+    
+      // Adjust keyboard refresh speed based on difficulty
+      const difficulty = difficultySelect.value;
+      let intervalSpeed;
+      switch (difficulty) {
+        case '10': // Hard
+          intervalSpeed = 1000;
+          break;
+        case '20': // Medium
+          intervalSpeed = 1200;
+          break;
+        case '30': // Easy
+          intervalSpeed = 1500;
+          break;
+      }
+    
+      keyboardInterval = setInterval(createKeyboard, intervalSpeed); // Set interval with chosen speed
     
       timer = setInterval(() => {
         timeLeft--;
@@ -585,6 +619,7 @@
         }
       }, 1000);
     }
+    
     
     function finishGame() {
       miracleInput.readOnly = true;

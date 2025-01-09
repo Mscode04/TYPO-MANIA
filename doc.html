@@ -145,6 +145,14 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+    .play{
+      text-decoration: none;
+      background-color: #3E5879;
+      padding: 8px;
+      color: #D8C4B6;
+      border-radius: 7px;
+      
+    }
   </style>
 </head>
 <body>
@@ -175,12 +183,17 @@
       <h2>1. What is Typo Mania?</h2>
       <p>Typo Mania is not just a game; it’s a battlefield where your typing skills are tested under extreme (and funny) conditions. Imagine trying to type your name on a keyboard designed by a hyperactive cat. Yes, it's that exciting.</p>
     </div>
-
     <div class="doc-section">
       <h2>2. How to Play?</h2>
       <ul>
         <li><i class="fas fa-keyboard"></i> Step 1: Enter your name (or any name—be creative, like "Mr. Typo Genius").</li>
-        <li><i class="fas fa-rocket"></i> Step 2: Select a difficulty level. We recommend starting with "Easy" unless you enjoy frustration.</li>
+        <li><i class="fas fa-rocket"></i> Step 2: Select a difficulty level. Each level adjusts the speed of the keyboard refresh:
+          <ul>
+            <li><strong>Easy :</strong> The keyboard changes every 1.5 seconds, giving you ample time to type.</li>
+            <li><strong>Medium :</strong> The keyboard changes every 1.2 seconds, challenging your typing reflexes.</li>
+            <li><strong>Hard :</strong> The keyboard changes every 1 second—test your skills under pressure!</li>
+          </ul>
+        </li>
         <li><i class="fas fa-play"></i> Step 3: Hit the "Start Game" button and prepare for the chaos.</li>
         <li><i class="fas fa-clock"></i> Step 4: Type your name using the virtual keyboard before time runs out. (Tip: No, shouting at the screen doesn't help.)</li>
       </ul>
@@ -204,6 +217,7 @@
         <li><i class="fas fa-mug-hot"></i> Have a cup of coffee before starting. Typing is better with caffeine.</li>
       </ul>
     </div>
+    <a class="play" href="index.html">Let's Play</a>
   </div>
 
   <!-- Footer -->
