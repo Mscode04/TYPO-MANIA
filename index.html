@@ -510,7 +510,7 @@
     const modal = document.getElementById('modal');
     const modalButton = document.getElementById('modalButton');
     const restartButton = document.getElementById('restartButton');
-
+    let keyboardInterval;
     const keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     let timer;
     let timeLeft;
@@ -572,7 +572,7 @@
       startButton.classList.add('hidden'); // Hide the Start Game button
     
       createKeyboard();
-      const keyboardInterval = setInterval(createKeyboard, 1500);
+      keyboardInterval = setInterval(createKeyboard, 1500); // Save the interval ID
     
       timer = setInterval(() => {
         timeLeft--;
@@ -580,7 +580,7 @@
     
         if (timeLeft <= 0) {
           clearInterval(timer);
-          clearInterval(keyboardInterval);
+          clearInterval(keyboardInterval); // Clear the keyboard interval when the game ends
           finishGame();
         }
       }, 1000);
@@ -605,7 +605,8 @@
 
 
     function resetGame() {
-      clearInterval(timer);
+      clearInterval(timer); // Clear the timer interval
+      clearInterval(keyboardInterval); // Clear the keyboard interval to prevent speed increase
       nameInput.disabled = false;
       nameInput.value = '';
       miracleInput.value = '';
@@ -615,6 +616,7 @@
       resetButton.classList.add('hidden');
       startButton.classList.remove('hidden'); // Show the Start Game button again
       timerDisplay.textContent = 'Time Left: 30 seconds';
+    
       const savedName = localStorage.getItem('playerName');
       if (savedName) {
         nameInput.value = savedName;
